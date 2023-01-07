@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Basic JS</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-tr from-[#075ba0] to-[#d62cc6] min-h-screen flex justify-center items-center flex-col"
+  >
+    <h1 class="text-slate-900 text-2xl">Calculator</h1>
+    <div class="container flex justify-center items-center">
+      <div
+        id="calculator"
+        class="m-2 bg-white rounded-lg p-2 bg-opacity-30 space-y-1 shadow-lg"
+      >
+        <input
+          type="text"
+          name="equation"
+          id="equation"
+          class="w-full bg-transparent outline-none bg-slate-900 bg-opacity-20 py-1 px-3 rounded-md text-white placeholder:text-white text-lg lg:text-2xl xl:text-3xl text-right"
+          placeholder="Enter Here---->"
+        />
+        <p class="text-right py-1 px-3 text-md lg:text-lg xl:text-xl">
+          <span>=</span>
+          <span id="answer">0</span>
+        </p>
+        <div
+          id="backspace"
+          class="flex justify-center items-center w-full ml-auto py-1 rounded-lg mr-0.5 hover:bg-opacity-80 hover:shadow-lg bg-white bg-opacity-30 cursor-default transition-all"
+        >
+          &lArr;
+        </div>
+        <div id="buttons" class="grid grid-cols-4 gap-1">
+          <div
+            id="button-1"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              9
+            </p>
+          </div>
+          <div
+            id="button-2"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              8
+            </p>
+          </div>
+          <div
+            id="button-3"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              7
+            </p>
+          </div>
+          <div
+            id="button-4"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-30 text-xl hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-2xl xl:text-3xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              +
+            </p>
+          </div>
+          <div
+            id="button-5"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              6
+            </p>
+          </div>
+          <div
+            id="button-6"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              5
+            </p>
+          </div>
+          <div
+            id="button-7"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              4
+            </p>
+          </div>
+          <div
+            id="button-8"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-30 text-xl hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-2xl xl:text-3xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              -
+            </p>
+          </div>
+          <div
+            id="button-9"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              3
+            </p>
+          </div>
+          <div
+            id="button-10"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              2
+            </p>
+          </div>
+          <div
+            id="button-11"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              1
+            </p>
+          </div>
+          <div
+            id="button-12"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-30 text-xl hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-2xl xl:text-3xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              *
+            </p>
+          </div>
+          <div
+            id="button-13"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-30 text-xl hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-2xl xl:text-3xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              /
+            </p>
+          </div>
+          <div
+            id="button-14"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-70 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              0
+            </p>
+          </div>
+          <div
+            id="button-15"
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-fuchsia-200 bg-opacity-30 text-xl hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-2xl xl:text-3xl lg:h-14 text-slate-900 rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              .
+            </p>
+          </div>
+          <div
+            id="button-="
+            class="buttons shadow-sm hover:shadow-lg h-10 bg-red-700 bg-opacity-60 text-lg hover:bg-white hover:text-red-400 transition-all hover:font-bold lg:text-xl xl:text-2xl lg:h-14 text-white rounded-lg"
+          >
+            <p
+              class="w-full cursor-default h-full flex justify-center items-center"
+            >
+              =
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
